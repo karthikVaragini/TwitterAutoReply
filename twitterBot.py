@@ -1,11 +1,14 @@
 import tweepy
 import time
 
-
-CONSUMER_KEY='24VBHsaynpHEQE15F1T77cLYl'
-CONSUMER_SECRET='TFOL7oR5b7M1v7Sl5oG3IjGsH4z3F16zO3NZmCYQ8HlQbf6zHj'
-ACCESS_KEY='135072303-2OuPOun8lJylUKLZWhZpbmRMKaDh5ikjTBrRHmck'
-ACCESS_SECRET='4A9x1PkY2vW1u1cI18wEezjzKhTGxyb62DspmxQO94WOC'
+#We need Twitter developer account
+#after getting the developer account access we deploy one app
+#that app will generate the following keys
+#Remember, We need read write permission for all the keys
+CONSUMER_KEY=''
+CONSUMER_SECRET=''
+ACCESS_KEY='-'
+ACCESS_SECRET=''
 
 auth=tweepy.OAuthHandler(CONSUMER_KEY,CONSUMER_SECRET)
 auth.set_access_token(ACCESS_KEY,ACCESS_SECRET)
@@ -48,7 +51,8 @@ def resposeToTweets():
             if('#' in hashTag):
                 print('found HashTag',flush=True)
                 print('responding back ....',flush=True)
-                api.update_status('@'+mention.user.screen_name+' '+hashTag+' '+'back to you !!',mention.id)
+                api.update_status('@'+mention.user.screen_name+' '+hashTag+' '+
+                                  'back to you !!',mention.id)
     
 while True:
     resposeToTweets()
