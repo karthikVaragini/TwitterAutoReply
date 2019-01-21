@@ -7,3 +7,4 @@ pip3 install -U git+https://github.com/tweepy/tweepy.git@2efe385fc69385b57733f74
 
 PreRequesit: 
 We need twitter developer Account
+Migrate the SQLite tables
