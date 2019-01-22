@@ -30,8 +30,6 @@ def storeLastSeenId(lastSeenId,fileName):
 def getHashTag(textList):
     for word in textList:
         if('#' in word):
-            import pdb
-            pdb.set_trace()
             return word
     
 def resposeToTweets():
@@ -46,8 +44,6 @@ def resposeToTweets():
         if('#' in mention.full_text):
             textList=mention.full_text.split(' ')
             hashTag=getHashTag(textList)
-            import pdb
-            pdb.set_trace()
             if('#' in hashTag):
                 print('found HashTag',flush=True)
                 print('responding back ....',flush=True)
